@@ -1,9 +1,12 @@
 package com.example.onlypass
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.onlypass.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,8 +20,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var binding = ActivityMainBinding.inflate(layoutInflater)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.mainToolBar)
+
+        // Toolbar에 표시되는 제목의 표시 유무, custom한 툴바 이름 출력
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
 
         val mAdapter = MainRvAdapter(this, passwordList)
 
@@ -28,5 +37,22 @@ class MainActivity : AppCompatActivity() {
         binding.mRecyclerView.layoutManager = lm
         binding.mRecyclerView.setHasFixedSize(true)
 
+    }
+
+    // 메뉴 바
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_add, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.menuPasswordSave -> {
+                val intent = Intent(applicationContext, AddActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 }

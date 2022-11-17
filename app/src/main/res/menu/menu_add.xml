@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add_save"
+        android:icon="@drawable/plus"
+        android:title="add_btn"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuPasswordSave"
+                android:title="비밀번호 추가" />
+            <item
+                android:id="@+id/menuCardSave"
+                android:title="카드 추가"/>
+            <item
+                android:id="@+id/menuBankSave"
+                android:title="은행 추가"/>
+        </menu>
+    </item>
+</menu>
