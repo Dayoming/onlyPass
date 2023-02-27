@@ -1,5 +1,7 @@
 package com.example.onlypass
 
-class passwordInfo (val idx: Int, val webName: String, val userEmail: String,
-                    val password: String, val webAddress: String, val category: String,
-                    val date: String, val memo: String)
+class PasswordInfo (var webName: String="", var userEmail: String="",
+                    var password: String="", var webAddress: String="", var category: String="",
+                    var date: String="", var memo: String="") {
+    var _idx:Int = 0
+}

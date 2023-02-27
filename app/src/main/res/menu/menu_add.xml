@@ -3,20 +3,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_add_save"
+        android:id="@+id/menu_search_btn"
+        android:icon="@drawable/ic_search"
+        app:actionViewClass="android.widget.SearchView"
+        android:title="search_btn"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_make_regex"
+        android:icon="@drawable/ic_makeregex"
+        android:title="비밀번호 정규화"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_sort_btn"
+        android:icon="@drawable/ic_sort"
+        android:title="sort_btn"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuPasswordSave"
         android:icon="@drawable/plus"
-        android:title="add_btn"
-        app:showAsAction="ifRoom">
-        <menu>
-            <item
-                android:id="@+id/menuPasswordSave"
-                android:title="비밀번호 추가" />
-            <item
-                android:id="@+id/menuCardSave"
-                android:title="카드 추가"/>
-            <item
-                android:id="@+id/menuBankSave"
-                android:title="은행 추가"/>
-        </menu>
+        android:title="추가"
+        app:showAsAction="never">
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/menuPasswordSave"-->
+<!--                android:title="비밀번호 추가" />-->
+<!--            <item-->
+<!--                android:id="@+id/menuCardSave"-->
+<!--                android:title="카드 추가"/>-->
+<!--            <item-->
+<!--                android:id="@+id/menuBankSave"-->
+<!--                android:title="은행 추가"/>-->
+<!--        </menu>-->
     </item>
 </menu>

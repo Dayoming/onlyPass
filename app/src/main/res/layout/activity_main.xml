@@ -5,30 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".MainActivity">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/mainToolBar"
-        app:titleTextColor="@color/white"
+    <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme">
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="MainActivity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OnlyPass"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
+    <TextView
+        android:id="@+id/loginText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="로그인 상태가 아님" />
+
+    <Button
+        android:id="@+id/regexBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="비밀번호 정규화" />
+
 </LinearLayout>
